@@ -449,6 +449,13 @@ button.gh-form-input {
     flex-grow: 1;
 }
 
+.gh-main-section {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+}
+
 .gh-canvas,
 .kg-width-full.kg-content-wide {
     --main: min(var(--content-width, 720px), 100% - var(--container-gap) * 2);
@@ -1003,8 +1010,12 @@ Search                         LOGO                    Login Subscribe
 .gh-card-wrapper {
     flex-grow: 1;
     padding: 0 20px;
+    padding-bottom:20px
 }
 
+.gh-card-wrapper-no-image {
+    padding: 20px;
+}
 .gh-card-tag {
     display: none;
     margin-bottom: 4px;
@@ -1027,11 +1038,22 @@ Search                         LOGO                    Login Subscribe
     opacity: 0.8;
 }
 
+.gh-card-excerpt-highlight {
+    display: -webkit-box;
+    overflow-y: hidden;
+    margin-top: 8px;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    font-family: var(--font-serif);
+}
+
 .gh-card-excerpt {
     display: -webkit-box;
     overflow-y: hidden;
     margin-top: 8px;
-    font-size: 2rem;
+    font-size: 2.2rem;
     line-height: 1.2;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -2375,6 +2397,10 @@ unless a heading is the very first element in the post content */
     margin-top: calc(68px * var(--content-spacing-factor, 1));
 }
 
+.gh-card-highlight{
+    background-color: var(--color-orange);
+    width: ;
+}
 /* Image */
 
 .kg-image {
@@ -2770,7 +2796,7 @@ figcaption a {
 }
 
 .has-serif-body .gh-card-excerpt {
-    font-size: 1.65rem;
+    font-size: 2rem;
     line-height: 1.4;
     letter-spacing: 0.0005em;
 }

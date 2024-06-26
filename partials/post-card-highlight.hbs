@@ -1,6 +1,6 @@
-<article class="gh-card {{post_class}}{{#unless @custom.show_images_in_feed}} no-image{{/unless}}">
+<article class="gh-card gh-card-highlight {{post_class}}{{#unless @custom.show_images_in_feed}} no-image{{/unless}}">
     <a class="gh-card-link" href="{{url}}">
-        {{!-- {{#if feature_image}}
+        {{#if feature_image}}
             <figure class="gh-card-image">
                 <img
                     srcset="{{img_url feature_image size="xs" format="webp"}} 160w,
@@ -15,8 +15,8 @@
                     {{#if lazyLoad}}loading="lazy"{{/if}}
                 >
             </figure>
-        {{/if}} --}}
-        <div class="gh-card-wrapper gh-card-wrapper-no-image">
+        {{/if}}
+        <div class="gh-card-wrapper">
             {{#if primary_tag}}
                 <p class="gh-card-tag">{{primary_tag.name}}</p>
             {{/if}}
@@ -39,11 +39,11 @@
                 <div class="header-line"></div>
          </footer>
             {{#if custom_excerpt}}
-                <p class="gh-card-excerpt ">{{custom_excerpt characters="200"}}</p>
+                <p class="gh-card-excerpt-highlight ">{{custom_excerpt characters="300"}}</p>
             {{/if}}
             {{#unless custom_excerpt}}
                 {{#if excerpt}}
-                    <p class="gh-card-excerpt ">{{excerpt characters="200"}}</p>
+                    <p class="gh-card-excerpt-highlight ">{{excerpt characters="300"}}</p>
                 {{/if}}
             {{/unless}}
             
