@@ -17,7 +17,7 @@
 
         <main class="gh-main"> 
             <section class="gh-main-section">
-
+{{log 'this is a simple log output'}}
 
                     {{!-- Homepage --}}
                     {{#match feed "home"}}
@@ -26,7 +26,7 @@
 
                                 {{#foreach posts}}
                                     {{#if @first}}
-                                                                {{> "post-card-highlight" lazyLoad=true}}
+                                        {{> "post-card-highlight" lazyLoad=true}}
 
                                     {{else}}
                                     {{/if}}
@@ -46,13 +46,128 @@
                             {{/get}}
 
                     {{/match}}
-
-                    
-
+                                      
 
             </section>
+                      <section class="gh-main-section">
+                    {{!-- Homepage --}}
+                    {{#match feed "home"}}
+                            {{#get "posts" include="authors" page="2"   limit="4"}}
+                                <div class="gh-main-highlight">
 
+                                {{#foreach posts}}
+                                    {{#if @first}}
+                                        {{> "post-card-highlight" lazyLoad=true}}
 
+                                    {{/if}}
+                                    
+                                {{/foreach}}
+                                </div>
+                                <div class="gh-feed">
+                                {{#foreach posts}}
+                                    {{#if @first}}
+                                    
+                                    {{else}}
+                                        {{> "post-card" lazyLoad=true}}
+                                    {{/if}}
+                                    
+                                {{/foreach}}
+                            </div>
+                            {{/get}}
+
+                    {{/match}}
+                                      
+
+            </section>
+                                  <section class="gh-main-section">
+                    {{!-- Homepage --}}
+                    {{#match feed "home"}}
+                            {{#get "posts" include="authors" page="3"   limit="4"}}
+                                <div class="gh-main-highlight">
+
+                                {{#foreach posts}}
+                                    {{#if @first}}
+                                        {{> "post-card-highlight" lazyLoad=true}}
+
+                                    {{/if}}
+                                    
+                                {{/foreach}}
+                                </div>
+                                <div class="gh-feed">
+                                {{#foreach posts}}
+                                    {{#if @first}}
+                                    
+                                    {{else}}
+                                        {{> "post-card" lazyLoad=true}}
+                                    {{/if}}
+                                    
+                                {{/foreach}}
+                            </div>
+                            {{/get}}
+
+                    {{/match}}
+                                      
+
+            </section>
+                                              <section class="gh-main-section">
+                    {{!-- Homepage --}}
+                    {{#match feed "home"}}
+                            {{#get "posts" include="authors" page="4"   limit="4"}}
+                                <div class="gh-main-highlight">
+
+                                {{#foreach posts}}
+                                    {{#if @first}}
+                                        {{> "post-card-highlight" lazyLoad=true}}
+
+                                    {{/if}}
+                                    
+                                {{/foreach}}
+                                </div>
+                                <div class="gh-feed">
+                                {{#foreach posts}}
+                                    {{#if @first}}
+                                    
+                                    {{else}}
+                                        {{> "post-card" lazyLoad=true}}
+                                    {{/if}}
+                                    
+                                {{/foreach}}
+                            </div>
+                            {{/get}}
+
+                    {{/match}}
+                                      
+
+            </section>
+            {{!-- <section class="gh-main-section">
+                    {{#match feed "home"}}
+                            {{#get "posts" include="authors" limit="12"}}
+                                <div class="gh-main-highlight">
+                                    {{#foreach posts}}
+                                        {{#if @index '>=' 4}}
+                                            {{> "post-card-highlight" lazyLoad=true}}
+                                        {{/if}}
+                                    {{/foreach}}
+
+                                    {{else}}
+                                    {{/if}}
+                                    
+                                {{/foreach}}
+                                </div>
+                                <div class="gh-feed">
+                                {{#foreach posts}}
+                                    {{#if @first}}
+                                    
+                                    {{else}}
+                                        {{> "post-card" lazyLoad=true}}
+                                    {{/if}}
+                                    
+                                {{/foreach}}
+                            </div>
+                            {{/get}}
+
+                    {{/match}}
+            </section> --}}
 
             {{!-- All posts --}}
                     {{#match feed "index"}}

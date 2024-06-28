@@ -1,7 +1,7 @@
 <article class="gh-card {{post_class}}{{#unless @custom.show_images_in_feed}} no-image{{/unless}}">
     <a class="gh-card-link" href="{{url}}">
-        {{!-- {{#if feature_image}}
-            <figure class="gh-card-image">
+        {{#if feature_image}}
+            <figure class="gh-card-image image-small">
                 <img
                     srcset="{{img_url feature_image size="xs" format="webp"}} 160w,
                             {{img_url feature_image size="s" format="webp"}} 320w,
@@ -15,12 +15,12 @@
                     {{#if lazyLoad}}loading="lazy"{{/if}}
                 >
             </figure>
-        {{/if}} --}}
+        {{/if}}
         <div class="gh-card-wrapper gh-card-wrapper-no-image">
             {{#if primary_tag}}
                 <p class="gh-card-tag">{{primary_tag.name}}</p>
             {{/if}}
-            <h3 class="gh-card-title  reem-kufi-alt">{{title}}</h3>
+            <h3 class="gh-card-title gh-card-title-no-image reem-kufi-alt">{{title}}</h3>
             <footer class="gh-card-meta">
                 <div class="header-line"></div>
                 {{#unless access}}
@@ -38,14 +38,14 @@
          -->
                 <div class="header-line"></div>
          </footer>
-            {{#if custom_excerpt}}
+            {{!-- {{#if custom_excerpt}}
                 <p class="gh-card-excerpt ">{{custom_excerpt characters="200"}}</p>
             {{/if}}
-            {{#unless custom_excerpt}}
+            {{#unless custom_excerpt}} --}}
                 {{#if excerpt}}
                     <p class="gh-card-excerpt ">{{excerpt characters="200"}}</p>
                 {{/if}}
-            {{/unless}}
+            {{!-- {{/unless}} --}}
             
         </div>
     </a>
