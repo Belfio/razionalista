@@ -2399,8 +2399,11 @@ unless a heading is the very first element in the post content */
 
 .gh-card-highlight{
     background-color: var(--color-orange);
-    width: ;
+    position: sticky;
+    top: 12px;
 }
+
+
 /* Image */
 
 .kg-image {

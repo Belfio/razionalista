@@ -1,7 +1,7 @@
 {
-    "name": "razionalista",
-    "description": "Razionalista.it",
-    "demo": "https://source.ghost.io",
+    "name": "abtemplate",
+    "description": "AB template",
+    "demo": "https://ghostdesign.uk/",
     "version": "0.1",
     "engines": {
         "ghost": ">=5.0.0"
@@ -18,9 +18,9 @@
         "postship": "git fetch && gulp release"
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org/"
+        "name": "AB",
+        "email": "hello@ghostdesign.uk",
+        "url": "https://ghostdesign.uk/"
     },
     "gpm": {
         "type": "theme",
@@ -84,15 +84,6 @@
         },
         "card_assets": true,
         "custom": {
-            "navigation_layout": {
-                "type": "select",
-                "options": [
-                    "Logo in the middle",
-                    "Logo on the left",
-                    "Stacked"
-                ],
-                "default": "Logo in the middle"
-            },
             "site_background_color": {
                 "type": "color",
                 "default": "#ffffff"
@@ -105,23 +96,6 @@
                 ],
                 "default": "Background color"
             },
-            "title_font": {
-                "type": "select",
-                "options": [
-                    "Modern sans-serif",
-                    "Elegant serif",
-                    "Consistent mono"
-                ],
-                "default": "Modern sans-serif"
-            },
-            "body_font": {
-                "type": "select",
-                "options": [
-                    "Modern sans-serif",
-                    "Elegant serif"
-                ],
-                "default": "Modern sans-serif"
-            },
             "signup_heading": {
                 "type": "text",
                 "description": "Used in your footer across your theme, defaults to site title when empty"
@@ -129,19 +103,6 @@
             "signup_subheading": {
                 "type": "text",
                 "description": "Defaults to site description when empty"
-            },
-            "header_style": {
-                "type": "select",
-                "options": [
-                    "Landing",
-                    "Highlight",
-                    "Magazine",
-                    "Search",
-                    "Off"
-                ],
-                "description": "Landing is recommended for all sites, Highlight & Magazine for those with more content",
-                "default": "Landing",
-                "group": "homepage"
             },
             "header_text": {
                 "type": "text",
@@ -162,15 +123,6 @@
                 "group": "homepage",
                 "visibility": "header_style:[Highlight, Magazine]"
             },
-            "post_feed_style": {
-                "type": "select",
-                "options": [
-                    "List",
-                    "Grid"
-                ],
-                "default": "List",
-                "group": "homepage"
-            },
             "show_images_in_feed": {
                 "type": "boolean",
                 "default": true,
@@ -186,21 +138,6 @@
                 "type": "boolean",
                 "default": true,
                 "group": "homepage"
-            },
-            "show_publication_info_sidebar": {
-                "type": "boolean",
-                "default": false,
-                "group": "homepage"
-            },
-            "show_post_metadata": {
-                "type": "boolean",
-                "default": true,
-                "group": "post"
-            },
-            "enable_drop_caps_on_posts": {
-                "type": "boolean",
-                "default": false,
-                "group": "post"
             },
             "show_related_articles": {
                 "type": "boolean",
