@@ -6,171 +6,13 @@
     * showSidebar (true, false)
 --}}
 
-<section class="gh-container is-{{#match postFeedStyle "List"}}list{{else}}grid{{/match}} gh-outer">
-    <div class="gh-container-inner gh-inner">
-        
-        
-            <h2 class="gh-container-title">
-                Le ultime di questo mese
-            </h2>
-        
-
+<section class="gh-container is-{{#match postFeedStyle "List"}}list{{else}}grid{{/match}} gh-outer ">
+    <div class="gh-container-inner gh-inner ">    
         <main class="gh-main"> 
-            <section class="gh-main-section">
-{{log 'this is a simple log output'}}
-
-                    {{!-- Homepage --}}
-                    {{#match feed "home"}}
-                            {{#get "posts" include="authors" limit="4"}}
-                                <div class="gh-main-highlight">
-
-                                {{#foreach posts}}
-                                    {{#if @first}}
-                                        {{> "post-card-highlight" lazyLoad=true}}
-
-                                    {{else}}
-                                    {{/if}}
-                                    
-                                {{/foreach}}
-                                </div>
-                                <div class="gh-feed">
-                                {{#foreach posts}}
-                                    {{#if @first}}
-                                    
-                                    {{else}}
-                                        {{> "post-card" lazyLoad=true}}
-                                    {{/if}}
-                                    
-                                {{/foreach}}
-                            </div>
-                            {{/get}}
-
-                    {{/match}}
-                                      
-
-            </section>
-                      <section class="gh-main-section">
-                    {{!-- Homepage --}}
-                    {{#match feed "home"}}
-                            {{#get "posts" include="authors" page="2"   limit="4"}}
-                                <div class="gh-main-highlight">
-
-                                {{#foreach posts}}
-                                    {{#if @first}}
-                                        {{> "post-card-highlight" lazyLoad=true}}
-
-                                    {{/if}}
-                                    
-                                {{/foreach}}
-                                </div>
-                                <div class="gh-feed">
-                                {{#foreach posts}}
-                                    {{#if @first}}
-                                    
-                                    {{else}}
-                                        {{> "post-card" lazyLoad=true}}
-                                    {{/if}}
-                                    
-                                {{/foreach}}
-                            </div>
-                            {{/get}}
-
-                    {{/match}}
-                                      
-
-            </section>
-                                  <section class="gh-main-section">
-                    {{!-- Homepage --}}
-                    {{#match feed "home"}}
-                            {{#get "posts" include="authors" page="3"   limit="4"}}
-                                <div class="gh-main-highlight">
-
-                                {{#foreach posts}}
-                                    {{#if @first}}
-                                        {{> "post-card-highlight" lazyLoad=true}}
-
-                                    {{/if}}
-                                    
-                                {{/foreach}}
-                                </div>
-                                <div class="gh-feed">
-                                {{#foreach posts}}
-                                    {{#if @first}}
-                                    
-                                    {{else}}
-                                        {{> "post-card" lazyLoad=true}}
-                                    {{/if}}
-                                    
-                                {{/foreach}}
-                            </div>
-                            {{/get}}
-
-                    {{/match}}
-                                      
-
-            </section>
-                                              <section class="gh-main-section">
-                    {{!-- Homepage --}}
-                    {{#match feed "home"}}
-                            {{#get "posts" include="authors" page="4"   limit="4"}}
-                                <div class="gh-main-highlight">
-
-                                {{#foreach posts}}
-                                    {{#if @first}}
-                                        {{> "post-card-highlight" lazyLoad=true}}
-
-                                    {{/if}}
-                                    
-                                {{/foreach}}
-                                </div>
-                                <div class="gh-feed">
-                                {{#foreach posts}}
-                                    {{#if @first}}
-                                    
-                                    {{else}}
-                                        {{> "post-card" lazyLoad=true}}
-                                    {{/if}}
-                                    
-                                {{/foreach}}
-                            </div>
-                            {{/get}}
-
-                    {{/match}}
-                                      
-
-            </section>
-            {{!-- <section class="gh-main-section">
-                    {{#match feed "home"}}
-                            {{#get "posts" include="authors" limit="12"}}
-                                <div class="gh-main-highlight">
-                                    {{#foreach posts}}
-                                        {{#if @index '>=' 4}}
-                                            {{> "post-card-highlight" lazyLoad=true}}
-                                        {{/if}}
-                                    {{/foreach}}
-
-                                    {{else}}
-                                    {{/if}}
-                                    
-                                {{/foreach}}
-                                </div>
-                                <div class="gh-feed">
-                                {{#foreach posts}}
-                                    {{#if @first}}
-                                    
-                                    {{else}}
-                                        {{> "post-card" lazyLoad=true}}
-                                    {{/if}}
-                                    
-                                {{/foreach}}
-                            </div>
-                            {{/get}}
-
-                    {{/match}}
-            </section> --}}
-
-            {{!-- All posts --}}
+           {{!-- All posts --}}
                     {{#match feed "index"}}
+                    
+                        
                         {{#match pagination.page 2}}
                             {{#get "posts" include="authors" limit=@config.posts_per_page as |recent|}}
                                 {{#foreach recent}}
@@ -181,13 +23,17 @@
                         {{#foreach posts}}
                             {{> "post-card" lazyLoad=true}}
                         {{/foreach}}
+                        
                     {{/match}}
 
                     {{!-- Tag and author pages --}}
                     {{#match feed "archive"}}
+                    <div class=" gh-container gh-feed  ">
+                        
                         {{#foreach posts}}
                             {{> "post-card" lazyLoad=true}}
                         {{/foreach}}
+                        </div>
                     {{/match}}
         </main>
 
